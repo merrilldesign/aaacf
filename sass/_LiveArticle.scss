@@ -1,0 +1,437 @@
+
+/* Custom List Styles */
+#wrapper .newsList {
+	clear: both;
+	@include box-sizing( border-box !important );
+	@include clearfix;
+	
+	border-top: 1px solid $hr_color;
+	
+	padding: 1em 0;
+	
+	h3 {
+		margin-top: 0;
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}
+#wrapper .homeList {
+	clear: both;
+	@include box-sizing( border-box !important );
+	@include clearfix;
+	
+	border-top: $homeList_border;
+	
+	padding: $homeList_padding;
+	
+	.date {
+		display: none;
+	}
+	
+	.listText {
+		float: left;
+		width: 100%;
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+		font-size: .9375em;
+	}
+	
+	
+}
+
+.seeAll {
+	border-top: $homeList_border;
+	padding: 1.5em 1.5em 0 0;
+	font-size: .875em;
+	
+	a {
+		color: $gold_color;
+		
+		&:hover {
+			color: darken ($gold_color, 5%);
+		}	
+	}
+
+}
+
+
+
+
+/* Main Module styles */
+
+#wrapper .custom_news {
+
+	.managearticle {
+		img {
+			width: auto;
+		}
+	}
+	.head {
+		display: none;
+	}
+	.article {
+		
+		.la_listing {
+			margin-bottom: 2em;
+		}
+		
+		.heading {
+	
+		    color: $article_head_color;
+			font-size: $article_head_size;  
+			font-family: $article_head_font;
+			font-weight: $article_head_weight;
+			line-height: $header_lineheight;
+			margin: 0.15em 0 0.15em;
+					
+			a, a:link, a:visited {		
+				color: $article_head_color;
+				font-size: 1em;  
+				font-family: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+			}
+			a:hover {
+				color: $link_color;
+			}
+			img {
+				width: auto;
+			}
+		}
+		.la_post .heading {
+			margin: $h2_margin;
+		}
+		
+		.metadata {
+			display: none;
+			
+			background: $article_tag_bkgd;
+			
+			margin: 0 0 1em;
+			padding: 0;
+			
+			color: $article_tag_color;
+			font-size: $article_tag_size;
+			
+			a, a:link, a:visited {
+				color: $article_tag_color;
+			}
+			a:hover {
+				color: $link_color;
+			}
+			
+			@media screen and (max-width: $medium-screen) {
+				width: 100%;
+			}
+		}
+		
+		.rating {
+			display: none;
+			
+			img {
+				width: auto;
+			}
+		}
+		.wrap-img {
+			.article-thumbnail {
+				margin-left: $imageFloat_marginSide !important;
+				margin-bottom: $imageFloat_marginBtm;
+				float: right;
+				width: $imageFloat_width / 2;
+						
+				@media screen and (max-width: $small-screen) {
+					float: none;
+					width: 100%;
+					margin: 0 0 0.5em !important;
+				}
+				
+			}
+		}
+		
+		.content {}
+		
+		
+		.readmore {
+			display: none;
+		}
+		
+		.socialnetwork {
+			display: none;
+		}
+		
+		
+		.line {
+			display: none;
+		}
+		.footer {
+			display: none;
+		}
+	}	
+	
+    .article-tags {
+		display: none;
+		margin: 0 0 2.5em;
+	}
+	
+	.la_comments,
+	.la-intro,
+	.la_related {
+		display: none;
+	}
+	
+	.CommentData {
+		img {
+			width: auto;
+		}
+	}
+	
+	
+	/**** WIDGETS ****/
+	
+	.categories, 
+	.tags, 
+	.archives, 
+	.authors, 
+	.mwidgetposts, 
+	.search {
+		clear: both;
+		position: relative;
+		display:block;
+		
+		border: 0;
+		border-top: 1px solid $hr_color;
+		border-bottom: 1px solid $hr_color;
+		
+		margin: -1px 0 0 0;
+		padding: 1em 0;
+				
+		
+		h3 {
+			background: none;
+			border: 0px;
+			@include border-radius(0);
+			height: auto;
+			
+			padding: 0;		
+			margin: 0 0 0.6em;
+			
+			color: $h3_color;
+			font-size: $h3_size;
+			font-family: $h3_font;
+			font-weight: $h3_weight;
+			line-height: $header_lineheight;
+		}
+		
+		p { 
+			padding-bottom: 0;
+			margin-bottom: 0;
+			
+			margin-bottom: 0.75em;
+		}
+		a, a:link, a:visited {
+			color: $link_color;
+			white-space: normal;		
+		}
+		
+		a:hover {
+			color: $hover_color;
+			text-decoration: none;
+		}
+	
+		img {
+			width: auto;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		ul li {
+			list-style: none outside none;
+			background: none;
+			margin: 0;
+			padding: 0;
+			border: 0px;
+			
+			
+			background:  url($image_path + "bullet.gif") no-repeat 0 3px;
+			padding-left: 22px;
+		}
+	
+		.treeview {
+			padding: 0;
+		}
+	
+		.treeview .rtIn,
+		.treeview .rtHover .rtIn, 
+		.treeview .rtSelected .rtIn {
+			text-decoration: none;
+		}
+	
+	}
+	
+	.featuredposts {
+		.posttitle {
+			font-size: 1.05em;
+			display: inline-block;
+			padding-bottom: 5px;
+		}
+		.posttimeago {
+			display: none;
+		}
+		.read-more {
+			display: none;
+		}
+		
+	}
+	.authors {
+		img {
+			display: none;
+		}
+	}
+	
+	.categories {
+		img {
+			display: none;
+		}
+		.RadTreeView .rtLines .rtTop,
+		.RadTreeView .rtLines .rtMid, 
+		.RadTreeView .rtLines .rtBot {
+			background: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.treeview .rtIn, 
+		.treeview .rtHover .rtIn, 
+		.treeview .rtSelected .rtIn {
+			padding: 0;
+		}
+		
+	}
+	
+	
+	.archives {
+	
+		.treeview .rtIn,
+		.treeview .rtHover .rtIn, 
+		.treeview .rtSelected .rtIn {
+			color: $font_color;
+			text-decoration: none;
+		}
+		
+		ul li {			
+			background:  none;
+			padding:0;
+		}
+		
+		.treeview a.rtIn, .treeview a.rtIn:link, .treeview a.rtIn:visited {
+			color: $link_color;
+		}
+		
+		.treeview a.rtIn:hover {
+			color: $hover_color;
+		}
+		
+	}
+	
+	
+	/**** Pager ****/
+	.pager {
+		text-align: left;
+		
+		font-size: 1em;
+		font-family: $main_font;
+		
+		border-top: 1px solid $article_pager_color;
+		padding-top: 1px;
+
+
+		.CurrentPage,
+		.CurrentPageSelected {
+			display: inline-block;
+			
+			margin: 0 1px 0 0;
+			padding: 2px 0;
+			
+			width: 40px;
+			text-align: center;
+			
+			background-color: $article_pager_active;
+			background-image: none;
+			border: 1px solid $article_pager_active;
+			
+			@include border-radius(0);
+			
+			color: #FFFFFF;
+			font-size: 0.85em;
+			font-weight: bold;
+		}
+
+		a.CurrentPage{
+			display: inline-block;
+			
+			margin: 0 1px 0 0;
+			padding: 2px 0;
+			
+			width: 40px;
+			text-align: center;
+			
+			background-color: $article_pager_color;
+			background-image: none;
+			border: 1px solid $article_pager_color;
+			
+			@include border-radius(0);
+			
+			color: #FFFFFF;
+			font-size: 0.85em;
+			font-weight: bold;	
+		}
+
+		a.CurrentPage:hover, 
+		a.CurrentPage:active {
+			background-color: $article_pager_active;
+			border: 1px solid $article_pager_active;
+		}
+	
+		a.PageNext,
+		a.PagePrev {
+			background: none;
+			border: 0;
+			@include border-radius(0);
+			
+			padding: 0;
+			
+			color: $article_pager_color;
+			font-size: 0.9em;
+		}
+		
+		
+		a.PageNext {
+			margin: 0 0 0 13px;
+		}
+		a.PagePrev {
+			margin: 0 13px 0 0;
+		}
+	
+	}
+	
+}
+#wrapper .articleSettings {
+	.stats li {
+		background: none;
+	}
+	
+}
+#wrapper .LiveArticlesWidget {
+	* {
+		@include box-sizing(content-box); 
+	}
+}
+
+

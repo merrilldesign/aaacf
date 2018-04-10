@@ -1,0 +1,548 @@
+
+/************* Pushy Nav Styles *************/
+
+
+$pushy_width: 400px;
+$pushy_sm_width: 200px;
+
+
+.pushy{
+    position: fixed;
+    width: $pushy_width;
+    height: 100%;
+    top: 0;
+    z-index: 99999;
+    -webkit-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    -moz-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+    -ms-overflow-scrolling: touch; 	
+	
+	right:0;
+    background: $nav_bkgd;
+    font-size: $nav_font_size;
+    font-weight: normal;
+	
+	@include clearfix;
+	
+	display: none;
+	
+	@media screen and (max-width: $fixed_break) {
+		display: block;
+	}
+	@media screen and (max-width: $xsmall-screen) {
+   		width: $pushy_sm_width;
+	}
+}
+
+.pushy a {
+    display: block;
+    padding: 0px;
+    border-bottom: $nav_border;
+    border-top: $nav_border;
+    text-decoration: none;
+    color: $nav_color;
+}
+
+.pushy a:hover{
+    color: $nav_hover_color;
+}
+
+/* Menu Movement */
+
+.pushy-left{
+    -webkit-transform: translate3d(-100%,0,0);
+    -moz-transform: translate3d(-100%,0,0);
+    -ms-transform: translate3d(-100%,0,0);
+    -o-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+}
+.pushy-right{
+    -webkit-transform: translate3d($pushy_width,0,0);
+    -moz-transform: translate3d($pushy_width,0,0);
+    -ms-transform: translate3d($pushy_width,0,0);
+    -o-transform: translate3d($pushy_width,0,0);
+    transform: translate3d($pushy_width,0,0);
+	
+	
+	@media screen and (max-width: $xsmall-screen) {
+		-webkit-transform: translate3d($pushy_sm_width,0,0);
+		-moz-transform: translate3d($pushy_sm_width,0,0);
+		-ms-transform: translate3d($pushy_sm_width,0,0);
+		-o-transform: translate3d($pushy_sm_width,0,0);
+		transform: translate3d($pushy_sm_width,0,0);
+	}
+}
+
+.pushy-open{
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+.container-push, .push-push{
+    -webkit-transform: translate3d(-$pushy_width,0,0);
+    -moz-transform: translate3d(-$pushy_width,0,0);
+    -ms-transform: translate3d(-$pushy_width,0,0);
+    -o-transform: translate3d(-$pushy_width,0,0);
+    transform: translate3d(-$pushy_width,0,0);
+	
+	@media screen and (max-width: $xsmall-screen) {
+		-webkit-transform: translate3d(-$pushy_sm_width,0,0);
+		-moz-transform: translate3d(-$pushy_sm_width,0,0);
+		-ms-transform: translate3d(-$pushy_sm_width,0,0);
+		-o-transform: translate3d(-$pushy_sm_width,0,0);
+		transform: translate3d(-$pushy_sm_width,0,0);
+	}
+}
+
+/* Menu Transitions */
+
+.pushy, #wrapper, .push{
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.16, .68, .43, .99);
+    -moz-transition: -moz-transform .2s cubic-bezier(.16, .68, .43, .99);
+    -o-transition: -o-transform .2s cubic-bezier(.16, .68, .43, .99);
+    transition: transform .2s cubic-bezier(.16, .68, .43, .99);
+    /* improves performance issues on mobile*/
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+	
+}
+.preload.pushy {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
+
+/* Site Overlay */
+
+.site-overlay{
+    display: none;
+}
+
+
+.pushy-active .site-overlay{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: $pushy_width;
+    bottom: 0;
+    left: 0px;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-animation: fade 500ms;
+    -moz-animation: fade 500ms;
+    -o-animation: fade 500ms;
+    animation: fade 500ms;
+	
+	@media screen and (max-width: $xsmall-screen) {
+	    right: $pushy_sm_width;
+	}
+}
+
+/*Mobile Nav*/
+#menubar {
+	width: 100%;
+	height: $fixed_height;
+	text-align: right;
+	background: $bkgd_fixed;
+	
+	@media screen and (min-width: $fixed_break) {
+		display: none;
+	}
+}
+.menu-btn {
+	@include box-sizing( border-box !important );
+	float: none;
+	width: auto;
+	display: inline-block;
+	
+	border-bottom: none;
+	position: relative;
+	z-index: 9999;
+	cursor: pointer;
+	
+	padding: $nav_btn_padding;
+	height: $fixed_height;
+	
+	background: $nav_btn_bkgd;
+	
+	color: $nav_btn_color;
+	font-size: $nav_btn_size;
+	font-family: $nav_btn_font;
+	font-weight: $nav_btn_weight;
+	line-height: $fixed_height;
+	text-transform: uppercase;
+	
+	.text {
+		color: $nav_btn_color;		
+	}
+	
+	@media screen and (min-width: $fixed_break) {
+		display: none;
+	}
+	@media screen and (max-width: $small-screen) {
+		
+	}
+	
+	.ie8 & {
+		display: none;
+	}
+}
+
+.open-panel {
+	float: right;
+	width: $pushy_width;
+	text-align: right;
+	
+	@media screen and (min-width: $fixed_break) {
+		display: none;
+	}
+	@media screen and (max-width: $xsmall-screen) {
+   		width: $pushy_sm_width;
+	}
+}
+a.open-panel,
+a.open-panel:link,
+a.open-panel:active  {
+
+	color: $nav_color;
+	font-size: $nav_font_size;
+	border-bottom: none;
+	font-family: $main_font;
+	
+	.text {
+		color: $nav_color;		
+	}
+		
+	
+	@media screen and (max-width: $fixed_break) {
+		display: block;
+	}
+	
+}
+
+
+#nav {
+	width: 100%;
+    height: 100%;
+	
+	padding: .33em 0;
+	
+	background: $nav_bkgd;
+	
+	overflow: auto;
+	-ms-overflow-scrolling: touch;
+
+	
+	.close-panel {
+		text-align: center;
+		margin: 0 3% .75em 3%;
+		text-align: right;
+	}
+	a.close-panel,
+	a.close-panel:link,
+	a.close-panel:active  {
+	
+		color: $nav_btn_color;
+		font-size: 1.5em;
+		
+		display: block;
+		clear: both;
+		
+		border-bottom: none;
+	}
+	
+	
+	ul {
+		
+		li {
+			width: 100%;
+			display: block;
+			text-align: left;
+			background: none;
+			margin: 0;
+			padding: 0;
+		}
+   }
+
+}
+@media screen and (max-width: $fixed_break) {
+/* .openNav #wrapper {
+   right: 0;
+	@include translate3d(-$pushy_width, 0, 0);
+	@include transition(transform 500ms ease);
+
+  }
+ */ 
+
+  
+  /* When the panel is closed, transition the page back to the right
+  #wrapper {
+    right: 0;
+	@include translate3d(0, 0, 0);
+	@include transition(transform 500ms ease);
+  }
+ */
+
+}
+
+#nav .RadPanelBar_Default {    
+	width: 100%;
+	background: none;
+	
+	/* Fixes Panelbar issues */
+	.rpLink, .rpHeaderTemplate, .rpOut {
+		border:0px;
+	}
+	.rpOut {
+		display: block;
+		padding: 0px;
+	}
+	
+	.rpRootGroup { 
+		padding: 1em 5%;
+		border: none;
+		background: none;
+	}
+	.rpLink {
+		display:block;
+		padding: $nav_padding;
+		margin: $nav_margin;
+		
+		background: none;
+		border-top: $nav_border;
+		
+		@include transition( none );
+		
+		color: $nav_color;
+		font-size: $nav_font_size;
+		font-family: $main_font;
+		font-weight:normal;
+		line-height: 130%;
+		text-decoration:none;
+		
+		&:hover,
+		&:active,
+		&:focus {
+			color: $nav_hover_color;		
+		}
+		&.focused{
+			color: $nav_active_color;
+		}
+	}
+	.rpFirst .rpLink{
+		border: 0px;
+	}
+	.rpText {
+		padding:0px;
+	}
+
+	.rpGroup {
+		background: none;
+		border: 0px;
+		padding: 0.5em 0em 0!important;
+		
+		.rpOut {
+			background: none;
+		}
+		.rpLink {
+			background: none;
+			border: 0px;
+			padding: 0 0 0 15px;
+			margin: 0em 1em 1em 1.25em;
+			
+			font-size: $nav_font_size - 0.5em;    
+			font-weight: normal;
+						
+			&:hover,
+			&:active,
+			&:focus {
+				background: none;
+				color: $nav_hover_color;
+			}
+			&.rpSelected{
+				background: none;
+				color: $nav_active_color;			
+			}
+		}
+		
+	}
+
+	.rpGroup .rpGroup {
+		border: 0px;
+		padding: 0em !important;
+		
+		.rpLink {
+			margin: 0 0 1em 2.5em;
+		}
+		
+	}
+	.rpGroup .rpGroup .rpGroup {
+		border: 0px;
+		padding: 0em !important;
+		
+		.rpLink {
+			margin: 0 0 1em 3.75em;
+		}
+	}
+	
+	
+	.rpExpandable span.rpExpandHandle {
+	
+		background: $nav_icon_bkgd;
+		@include border-radius( 50% );
+		
+		height: 29px;
+		width: 29px;
+		text-align: center;
+		margin: 0;
+		
+		color: $nav_icon_root;
+		font-size: 0.85em;
+	
+		&:before {
+			font-family: 'icomoon';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+		
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			
+			display: block;
+			
+			content: "\e633";			//Plus Icon
+			line-height: 29px;
+			font-size: 0.9em;
+		}
+	}
+	
+	.rpGroup .rpExpandable span.rpExpandHandle {
+		background: none;
+		@include border-radius( 50% );
+		
+		height: 20px;
+		width: 20px;
+		text-align: center;
+		margin: 0;
+		
+		color: $nav_icon_group;
+		font-size: 1em;
+	
+		&:before {
+			font-family: 'icomoon';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+		
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			
+			display: block;
+			
+			content: "\e633";			//Plus Icon
+			line-height: 20px;
+			font-size: 0.9em;
+		}
+	}
+	
+	
+	.rpExpanded span.rpExpandHandle {
+		color: $nav_icon_root;
+		
+		&:before {
+			font-family: 'icomoon';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+		
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			
+			display: block;
+			
+			content: "\e634";		//Minus Icon
+			line-height: 29px;
+			font-size: 0.9em;
+		}
+	}
+	
+	.rpGroup .rpExpanded span.rpExpandHandle {
+		color: $nav_icon_group;
+		
+		&:before {
+			font-family: 'icomoon';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+		
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			
+			display: block;
+			
+			content: "\e634";		//Minus Icon
+			line-height: 20px;
+			font-size: 0.9em;
+		}
+	}
+	
+	a.rpExpandable:hover .rpNavigation span.rpExpandHandle,
+	a.rpExpanded:hover .rpNavigation .rpExpandHandle {
+		color: $nav_icon_root;
+		@include border-radius( 50% );
+	}
+	
+	.rpGroup .rpExpanded .rpExpandHandle, 
+	.rpGroup .rpExpandable .rpExpandHandle {
+		background: none;
+		text-align: right;
+		
+		font-size: 0.8em;
+	}
+	
+	.rpGroup a.rpExpandable:hover .rpNavigation span.rpExpandHandle,
+	.rpGroup a.rpExpanded:hover .rpNavigation .rpExpandHandle {
+		color: $nav_icon_root;
+		@include border-radius( 50% );
+	}
+}
+
+#buttons {
+	display: none;
+	padding: 1em 0 0;
+	
+	a, a:link, a:visited {
+		@include secondaryButton;
+		margin-bottom: 1em;
+	}
+	a:hover {
+		@include secondaryButton_Hover;
+	}
+		
+	@media screen and (max-width: $small-screen) {
+		display: block;
+	}
+}

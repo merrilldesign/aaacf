@@ -1,0 +1,223 @@
+
+/************* Container Styles *************/
+
+
+
+.callout {
+	position: relative;
+	display:inline-block;
+		
+	float: right;
+	width: $callout_width;
+	margin: $callout_margin;
+	clear: right;
+	
+	
+	.cont_content {
+		padding: $callout_padding;
+		
+		background: $callout_bkgd;
+		border-bottom: $callout_border;
+		border-top: 1px solid $darkteal_color;
+	
+		color: $callout_color;
+		font-size: $callout_size;
+		font-family: $callout_font;
+		line-height: $callout_lineheight;
+	}
+	
+	h3 {
+		margin-top: 1.5em;
+	
+		color: $callout_h3_color;
+		font-size: $callout_h3_size;
+		font-family: $callout_h3_font;
+	}
+	
+	p, ul, ol { 
+		padding-bottom: 0; 
+		margin-bottom: 0;
+		
+		margin-bottom: 1em;
+	}
+	
+	img {
+		margin: -25px -12% 0;
+		width: 124%;
+		max-width: 124%;
+	}
+	
+	ul li {
+		margin-left: 1%;
+		padding: $callout_list_padding;
+		background: $callout_list_image;
+	}
+	
+	a, a:link, a:visited {
+		color: $gold_color;
+		font-weight: $home_link_weight;
+		
+		&.arrowLink {
+			&:after {
+				content:  "\e647";
+				font-size: 70%;
+				margin-left: .25em;
+				color: $gold_color;			
+			}
+		}
+		
+		&.button {
+			@include tertiaryButton;
+		}
+	}
+	a:hover {
+		color: darken($gold_color, 10%);
+		
+		&.button {
+			@include tertiaryButton_Hover;
+		}
+	}
+	
+	@media screen and (max-width: $small-screen) {
+		float: none;
+		width: 100%;
+		margin: 0 0 2em;
+	}
+	
+	
+}
+
+
+.quote {
+	position: relative;
+	display:inline-block;
+		
+	margin: $quote_margin;
+	
+
+	color: $quote_color;
+	font-size: $quote_font_size;
+	font-family: $quote_font;
+	font-weight: $quote_font_weight;
+	line-height: $quote_lineheight;
+	
+	p { 
+		padding-bottom: 0;
+		margin-bottom: 0;
+		
+		margin-bottom: 0.6em;
+	}
+	
+	.quoteIcon {
+		background: $quote_icon_bkgd;
+		display: inline-block;
+		float: left;
+		margin-top: 5px;
+				
+		width: $quote_icon_width;
+		height: $quote_icon_width;
+		
+		text-align: center;
+		color: $quote_icon_color;
+		
+		span {
+			font-size: 22px;
+			line-height: $quote_icon_width;
+		}
+	}
+	.cont_content {
+		display: inline-block;
+		padding: $quote_padding;
+
+		float: right;		
+		width: 90%;
+	}
+	
+	@media screen and (max-width: $small-screen) {
+		
+		.quoteIcon {
+			float: none;
+			display: block;
+			margin: 0 auto 1em;
+		}
+		
+		.cont_content {
+			float: none;
+			width: 100%;
+		}
+	}
+	
+	
+}
+
+
+.featured {
+	position: relative;
+	
+	background: $featured_bkgd;
+	padding: $featured_padding;
+	margin: $featured_margin;
+	
+	text-align: center;
+	
+	color: $featured_color;
+	font-size: $featured_size;
+	font-family: $featured_font;
+	font-weight: $featured_weight;
+	
+	
+	p, ul, ol { 
+		padding-bottom: 0; 
+		margin-bottom: .25em;
+	}
+	
+	a, a:link, a:visited {
+		color: $gold_color;
+		font-weight: normal;	
+	}
+	 a:hover {
+		color: darken($gold_color, 10%);
+	}
+	.cont_content {
+	}
+	
+	@media screen and (max-width: $small-screen) {
+	
+	}
+	
+	
+}
+
+
+.story {
+	position: relative;
+	
+	background: $story_bkgd;
+	padding: $story_padding;
+	
+	@include clearfix;
+		
+	img.imageleft,
+	img.imageright {
+		width: $story_image_width;
+		max-width: 100%;
+		
+		margin-bottom: 0;
+		
+		@media screen and (max-width: $xsmall-screen) {
+			width: 100%;
+			
+			margin-bottom: 1em;	
+		}
+	}
+	
+	.cont_content {
+
+	}
+	
+	@media screen and (max-width: $small-screen) {
+	
+	}
+	
+	
+}

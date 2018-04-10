@@ -1,0 +1,5 @@
+html, body, div, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, img, table, td {/*Sets up a series of default settings, and how other selectors can inherit them. This reduces the size of your CSS file and decreases any style maintenance*/
+	margin: 0;
+	padding: 0;
+	border: 0;
+}

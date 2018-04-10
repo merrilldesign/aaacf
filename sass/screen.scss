@@ -1,0 +1,182 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "reset";
+@import "base";
+
+
+* { @include box-sizing(border-box); } 
+
+@-webkit-viewport { width:device-width; }
+@-moz-viewport { width:device-width; }
+@-ms-viewport { width:device-width; }
+@-o-viewport { width:device-width; }
+@viewport { width:device-width; }
+
+
+
+/************* Fonts *************/
+
+
+@import "htmlelements";
+@import "clientstyles";
+@import "layout";
+@import "containers";
+@import "LiveArticle";
+
+/* Navigations */
+@import "pushyNav";
+/*@import "responsiveNav";*/
+
+
+
+/* Overrides for Admin skin */
+@import "admin";  	//must always be last
+
+
+/************* DNN Overwrite Styles *************/
+#fsMap .primaryNav li {
+	margin-bottom: 0;
+}
+.RadComboBoxDropDown_DnnBlack .rcbItem, 
+.RadComboBoxDropDown_DnnBlack .rcbHovered,
+#ControlBar ul li,
+ul.vLetterSearch li,
+ul.uLetterSearch li,
+ul.dnnActions li,
+ul.dnnAdminTabNav li {
+	margin: 0;
+	padding: 0;
+	background: none;
+}
+#ControlBar .subNav.advanced dl ul li {
+	padding: 5px 15px 0 25px;
+	margin: 0 1px 1px 0;
+	background: #292929;
+}
+
+ul.dnnActions li,
+ul.dnnAdminTabNav li {
+	margin-right: 4px;
+}
+.dnnPrimaryAction, .dnnFormItem input[type="submit"], a.dnnPrimaryAction {
+	color: #efefef;
+}
+
+.dnnFileUploadScope .dnnFormItem .RadComboBox_Default *, 
+.dnnFileUploadScope .dnnFormItem .dnnDropDownList *,
+.dnnActionMenu *,
+#ControlBar_ControlPanel *,
+.actionMenu * {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+form .actionMenu ul {
+	z-index: inherit !important;
+}
+.dnn_mact {
+	margin: 0;
+	padding: 0;
+//	width: 200px;
+}
+.dnn_mact li {
+	margin: 0;
+	padding: 0;
+	background: none;
+}
+.rgMasterTable img,
+.dnnGrid img,
+.RadTreeView_Default img,
+.dnnTreeLegend img,
+.dnnActionMenu img,
+.dnn_mact > li img {
+	width: auto;
+	max-width: 100%;
+	margin: 0px !important;
+}
+
+.dnnActionMenu a,
+.dnn_mact > li ul a {
+	color: $link_color !important;
+	font-size: 1em;
+	font-weight: normal !important;
+	text-transform: none !important;
+}
+.dnnActionMenu a:hover,
+.dnn_mact > li ul a:hover {
+	color: $hover_color !important;
+}
+
+.liveaccordion ul * {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.RadMenu .rmLeftImage {
+	width: auto;
+	max-width: 100%;
+}
+.console,
+.dnnGrid{
+   img {
+		width: auto;
+        max-width: inherit !important;
+   }
+}
+.DNNContainer_Title_h2 {
+	.TitleH2 {
+		font-size: 25px !important;
+	}
+}
+.dnnEditState .DnnModule {
+	clear: both;
+}
+
+
+/**  Search Styles  **/
+.searchInputContainer {
+    display: inline !important;
+	max-width: 100%;
+}
+.searchSkinObjectPreview {
+	position: absolute;
+	z-index: 905;
+}
+ul.searchSkinObjectPreview > li,
+ul.searchSkinObjectPreview > li.searchSkinObjectPreview_group {
+	background: none;
+	margin: 0;
+	padding: 6px 12px;
+}
+
+#wrapper .dnnSearchBoxPanel {
+    background: none;
+    max-width: 980px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+
+
+/*clears floats with no presentational markup*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-table;
+}
+/*Hides from IE Mac \*/
+
+.clearfix {
+	display: block;
+	height: 1%;
+}
+/*End Hack \*/

@@ -1,0 +1,68 @@
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=15af5ed1-5c14-475d-910e-e9eda455b573");
+@font-face{
+font-family:"Gill Sans W04_n4";
+src:url("Fonts/c575cf0c-7e15-4f49-913a-af4676e20343.eot?#iefix") format("eot")
+}
+@font-face{
+font-family:"Gill Sans W04";
+src:url("Fonts/c575cf0c-7e15-4f49-913a-af4676e20343.eot?#iefix");
+src:url("Fonts/c575cf0c-7e15-4f49-913a-af4676e20343.eot?#iefix") format("eot"),url("Fonts/a5dcf2a7-92c3-402b-8233-9da23c2af1c1.woff2") format("woff2"),url("Fonts/39ede25d-544d-4537-8668-3e9af68a26ec.woff") format("woff"),url("Fonts/fe7e264f-3a4a-40c8-85eb-f9e2cb4b6f21.ttf") format("truetype"),url("Fonts/f45aa0ef-7101-4ac6-84f9-fce14d01e189.svg#f45aa0ef-7101-4ac6-84f9-fce14d01e189") format("svg");
+font-weight: 400;
+font-style: normal;
+}
+@font-face{
+font-family:"Gill Sans W01_n2";
+src:url("Fonts/acd8a043-828c-4c2c-98cb-b5224f5d4cdb.eot?#iefix") format("eot")
+}
+@font-face{
+font-family:"Gill Sans W01";
+src:url("Fonts/acd8a043-828c-4c2c-98cb-b5224f5d4cdb.eot?#iefix");
+src:url("Fonts/acd8a043-828c-4c2c-98cb-b5224f5d4cdb.eot?#iefix") format("eot"),url("Fonts/a2926047-aec5-42f4-b352-e593469518be.woff2") format("woff2"),url("Fonts/c56da29d-9c5b-4d94-900f-770cde3dd317.woff") format("woff"),url("Fonts/378182d1-8021-4674-a814-cc8f01f9a937.ttf") format("truetype"),url("Fonts/d8851d95-478d-47a9-a0b0-a8d8e4ca127a.svg#d8851d95-478d-47a9-a0b0-a8d8e4ca127a") format("svg");
+font-weight: 200;
+font-style: normal;
+}
+@font-face{
+font-family:"Gill Sans W01_n7";
+src:url("Fonts/1a6dec8e-26f9-4243-8495-835709538f92.eot?#iefix") format("eot")
+}
+@font-face{
+font-family:"Gill Sans W01";
+src:url("Fonts/1a6dec8e-26f9-4243-8495-835709538f92.eot?#iefix");
+src:url("Fonts/1a6dec8e-26f9-4243-8495-835709538f92.eot?#iefix") format("eot"),url("Fonts/2029e71f-067d-46a8-bc44-b5c64a258928.woff2") format("woff2"),url("Fonts/f05272f9-83e3-4de6-8423-5d57f730c87b.woff") format("woff"),url("Fonts/33f5d8d9-105f-4a49-9351-74ecae7f4a49.ttf") format("truetype"),url("Fonts/b56150eb-5caa-4385-b907-373e97ddb2ff.svg#b56150eb-5caa-4385-b907-373e97ddb2ff") format("svg");
+font-weight: 700;
+font-style: normal;
+}
+@font-face{
+font-family:"Proxima Nova W01_n2";
+src:url("Fonts/93cc6d34-798e-42c8-87d2-fd6391801b63.eot?#iefix") format("eot")
+}
+@font-face{
+font-family:"Proxima Nova W01";
+src:url("Fonts/93cc6d34-798e-42c8-87d2-fd6391801b63.eot?#iefix");
+src:url("Fonts/93cc6d34-798e-42c8-87d2-fd6391801b63.eot?#iefix") format("eot"),url("Fonts/d9fe41ee-4904-4a11-ba11-b61cd3be767f.woff2") format("woff2"),url("Fonts/2fa30669-9bbd-4ced-912f-db94a367ed6c.woff") format("woff"),url("Fonts/c12b3ebb-3771-483f-a84a-ac63d615c28e.ttf") format("truetype"),url("Fonts/2a961063-ea56-4a4b-8cea-bdae32edb0e2.svg#2a961063-ea56-4a4b-8cea-bdae32edb0e2") format("svg");
+font-weight: 200;
+font-style: normal;
+}
+@font-face{
+font-family:"Proxima Nova W01_n4";
+src:url("Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix") format("eot")
+}
+@font-face{
+font-family:"Proxima Nova W01";
+src:url("Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix");
+src:url("Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix") format("eot"),url("Fonts/64017d81-9430-4cba-8219-8f5cc28b923e.woff2") format("woff2"),url("Fonts/e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff") format("woff"),url("Fonts/2aff4f81-3e97-4a83-9e6c-45e33c024796.ttf") format("truetype"),url("Fonts/ab9cd062-380f-4b53-b1a7-c0bec7402235.svg#ab9cd062-380f-4b53-b1a7-c0bec7402235") format("svg");
+font-weight: 400;
+font-style: normal;
+}
+@font-face{
+font-family:"Proxima Nova W01_n7";
+src:url("Fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix") format("eot")
+}
+@font-face{
+font-family:"Proxima Nova W01";
+src:url("Fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix");
+src:url("Fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix") format("eot"),url("Fonts/ae47a7f5-89da-4879-b934-29722c3dd451.woff2") format("woff2"),url("Fonts/70ae52ec-d89b-4c6a-9402-854ebe423c54.woff") format("woff"),url("Fonts/6a35571c-ea14-4dac-9ae1-0e7af0abeec8.ttf") format("truetype"),url("Fonts/ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c.svg#ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c") format("svg");
+font-weight: 700;
+font-style: normal;
+}

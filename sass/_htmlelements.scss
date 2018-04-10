@@ -1,0 +1,184 @@
+
+/************* HTML Styles *************/
+html {
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+body {
+	text-align: center;
+	font-size: 100%;
+	font-family: $main_font;
+	color: $font_color;
+	background: $bkgd_body;
+	overflow:hidden;
+}
+form {
+	display:inline;
+}
+h1 {
+	margin: $h1_margin;
+	
+	color: $h1_color;
+	font-size: $h1_size; 
+	font-family: $h1_font;
+	font-weight: $h1_weight;
+	line-height: $header_lineheight;
+}
+
+h2 {
+	margin: $h2_margin;
+	
+	color: $h2_color;
+	font-size: $h2_size;  
+	font-family: $h2_font;
+	font-weight: $h2_weight;
+	line-height: $header_lineheight;
+}
+
+
+h3 {
+	margin: $h3_margin;
+	
+	color: $h3_color;
+	font-size: $h3_size;  
+	font-family: $h3_font;
+	font-weight: $h3_weight;
+	line-height: $header_lineheight;
+	
+}
+
+
+h4 {
+	margin: $h4_margin;
+		
+	color: $h4_color;
+	font-size: $h4_size;
+	font-family: $h4_font;
+	font-weight: $h4_weight;
+	line-height: $header_lineheight;
+
+}
+
+h5 {
+	margin: $h5_margin;
+	
+	color: $h5_color;
+	font-size: $h5_size;
+	font-family: $h5_font;
+	font-weight: $h5_weight;
+	font-style: $h5_style;
+	line-height: $header_lineheight;
+}
+
+
+blockquote {
+	font-family: $main_font;
+	font-size: 0.95em;
+	line-height: 140%;
+}
+
+table {
+	border-collapse: collapse;
+}
+sup, sub {
+	font-size:80%;
+}
+p {
+	padding-bottom: 1.0em;
+}
+ul, ol {
+	padding: 0 0 1.5em;
+}
+ol{
+	li{
+			padding: 0 0 10px 5px;
+
+	}
+}
+ul ul, ol ol {
+	padding: 0;
+}
+ul li {
+	margin: $ul_margin;
+	padding: $ul_padding;
+	list-style-type: none;
+	background: $ul_bkgd;
+}
+ul ul li,
+ol ul li,
+ul ul ul li,
+ol ul ul li {
+	margin: $ul_margin;
+	padding: $ul_ul_padding;
+	list-style-type: none;
+	background: $ul_ul_bkgd;
+}
+
+
+ul li * {
+	margin-top: 0;
+}
+ul li p {
+	margin: 0;
+	padding: 0;
+}
+
+ol li {
+	margin: $ol_margin;
+}
+a, a:link, a:visited {
+	color: $link_color;
+	font-weight: bold;
+    text-decoration:none;
+
+	outline: none;
+	cursor: pointer;
+	
+	@include transition(color .2s ease-out, background .2s ease-in, opacity .2s ease-out, border .2s ease-out);
+	
+}
+a:hover {
+	color: $hover_color;
+  	text-decoration: none;
+}
+a img {
+	position: relative;
+	vertical-align:middle;
+}
+img {
+	width: 100%;
+	max-width: 100%;
+	
+	.c_DNN6_SubTitle & {
+		/*removes resizing on backend*/
+		width: auto;
+		max-width: 100%;
+	}
+}
+
+.ie8 a[name^=""] {
+	line-height:0px;
+	font-size:1px;
+}
+hr {
+	border:0;
+	border-top:1px solid $hr_color;
+	height:1px;  
+	
+	clear: both;
+	margin: 25px 0;
+}
+
+input,textarea,select{
+	font-family: $main_font;
+	font-size: 1em;
+}
+
+::-moz-selection {
+    background: $highlight_color;
+    text-shadow: none;
+}
+::selection  {
+    background: $highlight_color;
+    text-shadow: none;
+}
