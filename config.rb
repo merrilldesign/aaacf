@@ -11,7 +11,7 @@ fonts_dir = "fonts"
 output_style = :nested
 
 output_style = :compressed
-
+puts "Hello GitHub"
 puts "Hello World!"
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
