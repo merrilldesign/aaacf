@@ -12,6 +12,7 @@ output_style = :nested
 
 output_style = :compressed
 
+puts "Hello World!"
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
